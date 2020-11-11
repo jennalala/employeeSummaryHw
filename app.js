@@ -9,6 +9,13 @@ const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
+// create empty array to hold all employees
+// array of employee starter questions - will hold name id and role - whats your name, whats your id and whats your role
+// if this person is intern, ask these questions, manager, engineer etc
+
+// start with employee*
+
+
 
 
 // Write code to use inquirer to gather information about the development team members,
