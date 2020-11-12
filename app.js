@@ -1,3 +1,4 @@
+// const employees = require("./lib/Employee")
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
@@ -15,6 +16,7 @@ const render = require("./lib/htmlRenderer");
 
 // start with employee*
 
+const employees = []
 const newMemberQuestion = [
     {
         type: "list",
@@ -41,6 +43,7 @@ const employeeQuestions = [
         name: "email"
     },
 ];
+
 
 const managerQuestion = [
     {
