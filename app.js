@@ -96,9 +96,8 @@ const addManager = () => {
     inquirer.prompt(employeeQuestions).then((employeeAnswers) => {
         // Ask manager specifc question
         inquirer.prompt(managerQuestion).then((managerAnswer) => {
-            // Merges the two answer sets into one object
-            Object.assign(employeeAnswers, managerAnswer)
-            employees.push(employeeAnswers);
+            const manager = new Manager(employeeAnswers.name, employeeAnswers.id, employeeAnswers.email, managerAnswer.officeNumber);
+            employees.push(manager);
             newMember();
         });
     });
@@ -109,9 +108,8 @@ const addEngineer = () => {
     inquirer.prompt(employeeQuestions).then((employeeAnswers) => {
         // Ask engineer specifc question
         inquirer.prompt(engineerQuestion).then((engineerAnswer) => {
-            // Merges the two answer sets into one object
-            Object.assign(employeeAnswers, engineerAnswer)
-            employees.push(employeeAnswers);
+            const engineer = new Engineer(employeeAnswers.name, employeeAnswers.id, employeeAnswers.email, engineerAnswer.github);
+            employees.push(engineer);
             newMember();
         });
     });
@@ -122,9 +120,8 @@ const addIntern = () => {
     inquirer.prompt(employeeQuestions).then((employeeAnswers) => {
         // Ask intern specifc question
         inquirer.prompt(internQuestion).then((internAnswer) => {
-            // Merges the two answer sets into one object
-            Object.assign(employeeAnswers, internAnswer)
-            employees.push(employeeAnswers);
+            const intern = new Intern(employeeAnswers.name, employeeAnswers.id, employeeAnswers.email, internAnswer.school);
+            employees.push(intern);
             newMember();
         });
     });
